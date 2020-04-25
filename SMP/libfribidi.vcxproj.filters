@@ -111,9 +111,6 @@
     <ClInclude Include="..\lib\joining-types.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\mem.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="..\lib\run.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
@@ -121,6 +118,9 @@
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\common.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\fribidi-brackets.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
   </ItemGroup>
@@ -167,9 +167,6 @@
     <ClCompile Include="..\lib\fribidi-joining-types.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\fribidi-mem.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
     <ClCompile Include="..\lib\fribidi-mirroring.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
@@ -177,6 +174,9 @@
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\lib\fribidi-shape.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\fribidi-brackets.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
   </ItemGroup>

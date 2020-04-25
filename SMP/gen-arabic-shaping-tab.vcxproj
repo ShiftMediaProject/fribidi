@@ -119,7 +119,7 @@ del ..\lib\arabic-shaping.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-arabic-shaping-tab.c &gt; ..\SMP\lib\arabic-shaping.tab.i
+gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\arabic-shaping.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -152,7 +152,7 @@ del ..\lib\arabic-shaping.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-arabic-shaping-tab.c &gt; ..\SMP\lib\arabic-shaping.tab.i
+gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\arabic-shaping.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -184,7 +184,7 @@ del ..\lib\arabic-shaping.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-arabic-shaping-tab.c &gt; ..\SMP\lib\arabic-shaping.tab.i
+gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\arabic-shaping.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -217,7 +217,7 @@ del ..\lib\arabic-shaping.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-arabic-shaping-tab.c &gt; ..\SMP\lib\arabic-shaping.tab.i
+gen-arabic-shaping-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\arabic-shaping.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>

@@ -19,11 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\gen.tab\gen-unicode-version.c" />
+    <ClCompile Include="..\gen.tab\gen-brackets-tab.c" />
+    <ClCompile Include="..\gen.tab\packtab.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8F32B39F-E8A6-4FDE-B70B-1289B05893CB}</ProjectGuid>
-    <RootNamespace>gen-unicode-version</RootNamespace>
+    <ProjectGuid>{328216E3-9614-4A34-94AE-703BB4551E9C}</ProjectGuid>
+    <RootNamespace>gen-brackets-tab</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -96,13 +97,13 @@
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist ..\lib\fribidi-unicode-version.h (
-del ..\lib\fribidi-unicode-version.h
+if exist ..\lib\mirroring.tab.i (
+del ..\lib\mirroring.tab.i
 )</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalIncludeDirectories>.\;..\;..\lib;.\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>pow=powST;_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
@@ -119,8 +120,9 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt &gt; ..\SMP\lib\fribidi-unicode-version.h
+gen-brackets-tab.exe 2 .\unidata\BidiBrackets.txt .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\brackets.tab.i
 cd ..\SMP
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -129,13 +131,13 @@ cd ..\SMP
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist ..\lib\fribidi-unicode-version.h (
-del ..\lib\fribidi-unicode-version.h
+if exist ..\lib\mirroring.tab.i (
+del ..\lib\mirroring.tab.i
 )</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalIncludeDirectories>.\;..\;..\lib;.\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>pow=powST;_DEBUG;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -152,8 +154,9 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt &gt; ..\SMP\lib\fribidi-unicode-version.h
+gen-brackets-tab.exe 2 .\unidata\BidiBrackets.txt .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\brackets.tab.i
 cd ..\SMP
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -162,13 +165,13 @@ cd ..\SMP
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist ..\lib\fribidi-unicode-version.h (
-del ..\lib\fribidi-unicode-version.h
+if exist ..\lib\mirroring.tab.i (
+del ..\lib\mirroring.tab.i
 )</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalIncludeDirectories>.\;..\;..\lib;.\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>pow=powST;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -184,8 +187,9 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt &gt; ..\SMP\lib\fribidi-unicode-version.h
+gen-brackets-tab.exe 2 .\unidata\BidiBrackets.txt .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\brackets.tab.i
 cd ..\SMP
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -194,13 +198,13 @@ cd ..\SMP
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist ..\lib\fribidi-unicode-version.h (
-del ..\lib\fribidi-unicode-version.h
+if exist ..\lib\mirroring.tab.i (
+del ..\lib\mirroring.tab.i
 )</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalIncludeDirectories>.\;..\;..\lib;.\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>pow=powST;HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -217,8 +221,9 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt &gt; ..\SMP\lib\fribidi-unicode-version.h
+gen-brackets-tab.exe 2 .\unidata\BidiBrackets.txt .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\brackets.tab.i
 cd ..\SMP
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

@@ -120,7 +120,7 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\joining-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -153,7 +153,7 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\joining-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -185,7 +185,7 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\joining-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -218,7 +218,7 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\joining-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>

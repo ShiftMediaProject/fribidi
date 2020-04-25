@@ -120,7 +120,7 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\bidi-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -153,7 +153,7 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\bidi-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -185,7 +185,7 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\bidi-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>
@@ -218,7 +218,7 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h &gt; ..\SMP\lib\bidi-type.tab.i
 cd ..\SMP
 </Command>
     </PostBuildEvent>

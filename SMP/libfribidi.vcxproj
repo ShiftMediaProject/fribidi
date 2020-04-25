@@ -83,6 +83,7 @@
     <ClInclude Include="..\lib\fribidi-bidi-types-list.h" />
     <ClInclude Include="..\lib\fribidi-bidi-types.h" />
     <ClInclude Include="..\lib\fribidi-bidi.h" />
+    <ClInclude Include="..\lib\fribidi-brackets.h" />
     <ClInclude Include="..\lib\fribidi-common.h" />
     <ClInclude Include="..\lib\fribidi-deprecated.h" />
     <ClInclude Include="..\lib\fribidi-enddecls.h" />
@@ -96,7 +97,6 @@
     <ClInclude Include="..\lib\fribidi-unicode.h" />
     <ClInclude Include="..\lib\fribidi.h" />
     <ClInclude Include="..\lib\joining-types.h" />
-    <ClInclude Include="..\lib\mem.h" />
     <ClInclude Include="..\lib\run.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="fribidi-config.h" />
@@ -112,10 +112,10 @@
     <ClCompile Include="..\lib\fribidi-arabic.c" />
     <ClCompile Include="..\lib\fribidi-bidi-types.c" />
     <ClCompile Include="..\lib\fribidi-bidi.c" />
+    <ClCompile Include="..\lib\fribidi-brackets.c" />
     <ClCompile Include="..\lib\fribidi-deprecated.c" />
     <ClCompile Include="..\lib\fribidi-joining-types.c" />
     <ClCompile Include="..\lib\fribidi-joining.c" />
-    <ClCompile Include="..\lib\fribidi-mem.c" />
     <ClCompile Include="..\lib\fribidi-mirroring.c" />
     <ClCompile Include="..\lib\fribidi-run.c" />
     <ClCompile Include="..\lib\fribidi-shape.c" />
