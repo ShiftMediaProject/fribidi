@@ -7,9 +7,6 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{9dcb9da6-1c85-40b9-b875-9bdf9575be2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{e05e69ea-955c-4c2c-83f8-ff30c0007387}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\lib">
       <UniqueIdentifier>{ad563a82-4d36-4de0-a7a4-3d102f4ba6ae}</UniqueIdentifier>
     </Filter>
@@ -173,10 +170,5 @@
     <ClCompile Include="..\lib\fribidi-char-sets-utf8.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="libfribidi.def">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
