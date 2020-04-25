@@ -1,5 +1,5 @@
 /* FriBidi
- * fribidi-char-sets-cap-rtl.h - CapRTL character set conversion routines
+ * fribidi-char-sets-cp1256.h - CP1256 character set conversion routines
  *
  * Authors:
  *   Behdad Esfahbod, 2001, 2002, 2004
@@ -27,8 +27,8 @@
  * For licensing issues, contact <fribidi.license@gmail.com>.
  */
 
-#ifndef _FRIBIDI_CHAR_SETS_CAP_RTL_H
-#define _FRIBIDI_CHAR_SETS_CAP_RTL_H
+#ifndef _FRIBIDI_CHAR_SETS_CP1256_H
+#define _FRIBIDI_CHAR_SETS_CP1256_H
 
 #include "fribidi-common.h"
 
@@ -36,31 +36,21 @@
 
 #include "fribidi-begindecls.h"
 
-#define fribidi_char_set_name_cap_rtl "CapRTL"
-#define fribidi_char_set_title_cap_rtl "CapRTL (Test)"
+#define fribidi_char_set_name_cp1256 "CP1256"
+#define fribidi_char_set_title_cp1256 "CP1256 (MS Arabic)"
+#define fribidi_char_set_desc_cp1256 NULL
 
-#define fribidi_char_set_desc_cap_rtl FRIBIDI_NAMESPACE(char_set_desc_cap_rtl)
-const char *fribidi_char_set_desc_cap_rtl (
-  void
+FriBidiChar fribidi_cp1256_to_unicode_c (
+  char ch
 );
 
-#define fribidi_cap_rtl_to_unicode FRIBIDI_NAMESPACE(cap_rtl_to_unicode)
-FriBidiStrIndex fribidi_cap_rtl_to_unicode (
-  const char *s,
-  FriBidiStrIndex length,
-  FriBidiChar *us
-);
-
-#define fribidi_unicode_to_cap_rtl FRIBIDI_NAMESPACE(unicode_to_cap_rtl)
-FriBidiStrIndex fribidi_unicode_to_cap_rtl (
-  const FriBidiChar *us,
-  FriBidiStrIndex length,
-  char *s
+char fribidi_unicode_to_cp1256_c (
+  FriBidiChar uch
 );
 
 #include "fribidi-enddecls.h"
 
-#endif /* !_FRIBIDI_CHAR_SETS_CAP_RTL_H */
+#endif /* !_FRIBIDI_CHAR_SETS_CP1256_H */
 /* Editor directions:
  * vim:textwidth=78:tabstop=8:shiftwidth=2:autoindent:cindent
  */

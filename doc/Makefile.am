@@ -4,6 +4,7 @@ EXTRA_DIST =
 MOSTLYCLEANFILES =
 MAINTAINERCLEANFILES =
 
+if FRIBIDI_ENABLE_DOC
 # man3
 
 includepath =
@@ -12,23 +13,13 @@ headers =
 inst_symbols =
 noinst_symbols =
 
-include $(top_srcdir)/charset/Headers.mk
-headers += $(libfribidi_char_sets_la_headers)
-includepath += -I$(top_srcdir)/charset
-includevpath += :$(top_srcdir)/charset
-if FRIBIDI_CHARSETS
-inst_symbols += $(libfribidi_char_sets_la_symbols)
-else # !FRIBIDI_CHARSETS
-noinst_symbols += $(libfribidi_char_sets_la_symbols)
-endif # !FRIBIDI_CHARSETS
-
 # The lib/Headers.mk stuff should come after all optional stuff.
 include $(top_srcdir)/lib/Headers.mk
 headers += $(libfribidi_la_headers)
 includepath += -I$(top_builddir)/lib -I$(top_srcdir)/lib
 includevpath += :$(top_builddir)/lib:$(top_srcdir)/lib
 # The las two lines are not functions, we don't want them here.
-inst_symbols += $(shell head -n -2 $(top_srcdir)/lib/fribidi.def)
+inst_symbols += $(shell sed '$$d' $(top_srcdir)/lib/fribidi.def | sed '$$d')
 
 dist_man_MANS += $(inst_symbols:=.3)
 dist_noinst_MANS += $(noinst_symbols:=.3)
@@ -50,8 +41,7 @@ c2man.stamp: $(headers)
 	@touch $@.tmp
 	@($(LN_S) $^ . || cp $^ .)
 	@echo Running c2man
-	@$(top_srcdir)/missing --run c2man -T n $(C2MANFLAGS) $(headers) 2>&1 \
-	|| true
+	@$(C2MAN) -T n $(C2MANFLAGS) $(headers) 2>&1
 	@$(RM) $(headers)
 	@mv $@.tmp $@
 
@@ -61,5 +51,7 @@ $(man3): c2man.stamp
 		$(MAKE) $(AM_MAKEFLAGS) $<;\
 	fi
 	@touch $@
+
+endif # FRIBIDI_ENABLE_DOC
 
 -include $(top_srcdir)/git.mk

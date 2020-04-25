@@ -1,5 +1,5 @@
 /* FriBidi
- * fribidi-char-sets-cp1256.h - CP1256 character set conversion routines
+ * fribidi-char-sets-iso8859-8.h - ISO8859-8 character set conversion routines
  *
  * Authors:
  *   Behdad Esfahbod, 2001, 2002, 2004
@@ -27,8 +27,8 @@
  * For licensing issues, contact <fribidi.license@gmail.com>.
  */
 
-#ifndef _FRIBIDI_CHAR_SETS_CP1256_H
-#define _FRIBIDI_CHAR_SETS_CP1256_H
+#ifndef _FRIBIDI_CHAR_SETS_ISO8859_8_H
+#define _FRIBIDI_CHAR_SETS_ISO8859_8_H
 
 #include "fribidi-common.h"
 
@@ -36,23 +36,21 @@
 
 #include "fribidi-begindecls.h"
 
-#define fribidi_char_set_name_cp1256 "CP1256"
-#define fribidi_char_set_title_cp1256 "CP1256 (MS Arabic)"
-#define fribidi_char_set_desc_cp1256 NULL
+#define fribidi_char_set_name_iso8859_8 "ISO8859-8"
+#define fribidi_char_set_title_iso8859_8 "ISO8859-8 (Hebrew)"
+#define fribidi_char_set_desc_iso8859_8 NULL
 
-#define fribidi_cp1256_to_unicode_c FRIBIDI_NAMESPACE(cp1256_to_unicode_c)
-FriBidiChar fribidi_cp1256_to_unicode_c (
+FriBidiChar fribidi_iso8859_8_to_unicode_c (
   char ch
 );
 
-#define fribidi_unicode_to_cp1256_c FRIBIDI_NAMESPACE(unicode_to_cp1256_c)
-char fribidi_unicode_to_cp1256_c (
+char fribidi_unicode_to_iso8859_8_c (
   FriBidiChar uch
 );
 
 #include "fribidi-enddecls.h"
 
-#endif /* !_FRIBIDI_CHAR_SETS_CP1256_H */
+#endif /* !_FRIBIDI_CHAR_SETS_ISO8859_8_H */
 /* Editor directions:
  * vim:textwidth=78:tabstop=8:shiftwidth=2:autoindent:cindent
  */

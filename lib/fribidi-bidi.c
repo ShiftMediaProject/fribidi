@@ -56,6 +56,15 @@
 #define RL_BRACKET_TYPE(list) ((list)->bracket_type)
 #define RL_ISOLATE_LEVEL(list) ((list)->isolate_level)
 
+/* Pairing nodes are used for holding a pair of open/close brackets as
+   described in BD16. */
+struct _FriBidiPairingNodeStruct {
+  FriBidiRun *open;
+  FriBidiRun *close;
+  struct _FriBidiPairingNodeStruct *next;
+};
+typedef struct _FriBidiPairingNodeStruct FriBidiPairingNode;
+
 static FriBidiRun *
 merge_with_prev (
   FriBidiRun *second
@@ -161,7 +170,7 @@ static FriBidiRun *get_adjacent_run(FriBidiRun *list, fribidi_boolean forward, f
   return ppp;
 }
 
-#if DEBUG+0
+#ifdef DEBUG
 /*======================================================================
  *  For debugging, define some functions for printing the types and the
  *  levels.
@@ -391,15 +400,6 @@ fribidi_get_par_direction (
 
   return FRIBIDI_PAR_ON;
 }
-
-/* Pairing nodes are used for holding a pair of open/close brackets as
-   described in BD16. */
-struct _FriBidiPairingNodeStruct {
-  FriBidiRun *open;
-  FriBidiRun *close;
-  struct _FriBidiPairingNodeStruct *next;
-};
-typedef struct _FriBidiPairingNodeStruct FriBidiPairingNode;
 
 /* Push a new entry to the pairing linked list */
 static FriBidiPairingNode * pairing_nodes_push(FriBidiPairingNode *nodes,

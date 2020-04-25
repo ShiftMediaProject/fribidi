@@ -17,17 +17,14 @@ TXT_LOG_COMPILER = sh $(srcdir)/run.tests
 AM_CPPFLAGS = \
 		-I$(top_builddir)/lib \
 		-I$(top_srcdir)/lib \
-		-I$(top_srcdir)/charset \
-		$(GLIB_CFLAGS)
-LDADD = $(top_builddir)/lib/libfribidi.la $(GLIB_LIBS)
+		-I$(top_srcdir)/charset
+LDADD = $(top_builddir)/lib/libfribidi.la
 
-if FRIBIDI_USE_GLIB
-check_PROGRAMS = test test-character
+check_PROGRAMS = BidiTest BidiCharacterTest
 TESTS = $(TEST_DATAS)
-endif
 
-test_SOURCES = test.c
-test_character_SOURCES = test-character.c
+BidiTest_SOURCES = BidiTest.c
+BidiCharacterTest_SOURCES = BidiCharacterTest.c
 
 EXTRA_DIST = \
 	run.tests \
