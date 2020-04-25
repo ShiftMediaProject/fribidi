@@ -7,17 +7,17 @@
 #define FRIBIDI_NAME "GNU FriBidi"
 #define FRIBIDI_BUGREPORT "http://bugs.freedesktop.org/enter_bug.cgi?product=fribidi"
 
-#define FRIBIDI_VERSION "v1.0.1"
+#define FRIBIDI_VERSION "v1.0.2"
 #define FRIBIDI_MAJOR_VERSION v1
 #define FRIBIDI_MINOR_VERSION 0
-#define FRIBIDI_MICRO_VERSION 1
+#define FRIBIDI_MICRO_VERSION 2
 #define FRIBIDI_INTERFACE_VERSION 4
 #define FRIBIDI_INTERFACE_VERSION_STRING "4"
 
-/* Define to 1 if you want charset conversion codes in the library */
-#define FRIBIDI_CHARSETS 1
-
 /* The size of a `int', as computed by sizeof. */
 #define FRIBIDI_SIZEOF_INT 4
+
+/* Define if fribidi was built with MSVC */
+#define FRIBIDI_ENTRY
 
 #endif /* FRIBIDI_CONFIG_H */

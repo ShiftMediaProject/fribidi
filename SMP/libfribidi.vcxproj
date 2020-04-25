@@ -67,14 +67,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\charset\fribidi-char-sets-cap-rtl.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-cp1255.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-cp1256.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-iso8859-6.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-iso8859-8.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-list.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets-utf8.h" />
-    <ClInclude Include="..\charset\fribidi-char-sets.h" />
     <ClInclude Include="..\lib\bidi-types.h" />
     <ClInclude Include="..\lib\common.h" />
     <ClInclude Include="..\lib\debug.h" />
@@ -84,6 +76,14 @@
     <ClInclude Include="..\lib\fribidi-bidi-types.h" />
     <ClInclude Include="..\lib\fribidi-bidi.h" />
     <ClInclude Include="..\lib\fribidi-brackets.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-cap-rtl.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-cp1255.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-cp1256.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-iso8859-6.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-iso8859-8.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-list.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets-utf8.h" />
+    <ClInclude Include="..\lib\fribidi-char-sets.h" />
     <ClInclude Include="..\lib\fribidi-common.h" />
     <ClInclude Include="..\lib\fribidi-deprecated.h" />
     <ClInclude Include="..\lib\fribidi-enddecls.h" />
@@ -102,17 +102,17 @@
     <ClInclude Include="fribidi-config.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\charset\fribidi-char-sets-cap-rtl.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets-cp1255.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets-cp1256.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets-iso8859-6.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets-iso8859-8.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets-utf8.c" />
-    <ClCompile Include="..\charset\fribidi-char-sets.c" />
     <ClCompile Include="..\lib\fribidi-arabic.c" />
     <ClCompile Include="..\lib\fribidi-bidi-types.c" />
     <ClCompile Include="..\lib\fribidi-bidi.c" />
     <ClCompile Include="..\lib\fribidi-brackets.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-cap-rtl.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-cp1255.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-cp1256.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-iso8859-6.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-iso8859-8.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets-utf8.c" />
+    <ClCompile Include="..\lib\fribidi-char-sets.c" />
     <ClCompile Include="..\lib\fribidi-deprecated.c" />
     <ClCompile Include="..\lib\fribidi-joining-types.c" />
     <ClCompile Include="..\lib\fribidi-joining.c" />
@@ -548,8 +548,6 @@
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -619,8 +617,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -688,8 +684,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -759,8 +753,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -834,8 +826,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -913,8 +903,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -987,8 +975,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1065,8 +1051,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1141,8 +1125,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1219,8 +1201,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1295,8 +1275,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1373,8 +1351,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1456,8 +1432,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1543,8 +1517,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1625,8 +1597,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
@@ -1711,8 +1681,6 @@ del /f /q $(OutDir)\licenses\fribidi.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\fribidi
 copy ..\lib\fribidi*.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets.h "$(OutDir)"\include\fribidi
-copy ..\charset\fribidi-char-sets-list.h "$(OutDir)"\include\fribidi
 copy .\fribidi-config.h "$(OutDir)"\include\fribidi
 copy .\lib\fribidi-unicode-version.h "$(OutDir)"\include\fribidi
 mkdir $(OutDir)\licenses
