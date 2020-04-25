@@ -1,12 +1,6 @@
 /* FriBidi
  * gen-arabic-shaping-tab.c - generate arabic-shaping.tab.i
  *
- * $Id: gen-arabic-shaping-tab.c,v 1.2 2006-01-31 03:23:12 behdad Exp $
- * $Author: behdad $
- * $Date: 2006-01-31 03:23:12 $
- * $Revision: 1.2 $
- * $Source: /home/behdad/src/fdo/fribidi/togit/git/../fribidi/fribidi2/gen.tab/gen-arabic-shaping-tab.c,v $
- *
  * Author:
  *   Behdad Esfahbod, 2004, 2005
  *
@@ -28,7 +22,7 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA
  * 
- * For licensing issues, contact <license@farsiweb.info>.
+ * For licensing issues, contact <fribidi.license@gmail.com>.
  */
 
 #include <common.h>

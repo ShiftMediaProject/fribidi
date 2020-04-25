@@ -1,12 +1,6 @@
 /* FriBidi
  * gen-bidi-type-tab.c - generate bidi-type.tab.i
  *
- * $Id: gen-bidi-type-tab.c,v 1.18 2006-01-31 03:23:12 behdad Exp $
- * $Author: behdad $
- * $Date: 2006-01-31 03:23:12 $
- * $Revision: 1.18 $
- * $Source: /home/behdad/src/fdo/fribidi/togit/git/../fribidi/fribidi2/gen.tab/gen-bidi-type-tab.c,v $
- *
  * Author:
  *   Behdad Esfahbod, 2001, 2002, 2004
  *
@@ -28,7 +22,7 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA
  * 
- * For licensing issues, contact <license@farsiweb.info>.
+ * For licensing issues, contact <fribidi.license@gmail.com>.
  */
 
 #include <common.h>
@@ -324,9 +318,9 @@ gen_bidi_type_tab (
 	  FRIBIDI_VERSION ")\n" " * from the file %s of Unicode version "
 	  FRIBIDI_UNICODE_VERSION ". */\n\n", data_file_type);
 
-  printf ("#define PACKTAB_UINT8 fribidi_uint8\n"
-	  "#define PACKTAB_UINT16 fribidi_uint16\n"
-	  "#define PACKTAB_UINT32 fribidi_uint32\n\n");
+  printf ("#define PACKTAB_UINT8 uint8_t\n"
+	  "#define PACKTAB_UINT16 uint16_t\n"
+	  "#define PACKTAB_UINT32 uint32_t\n\n");
 
   if (!pack_table
       (table, FRIBIDI_UNICODE_CHARS, 1, LTR, max_depth, 3, names,

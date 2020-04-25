@@ -2,10 +2,10 @@ EXTRA_DIST = fribidi.def
 
 lib_LTLIBRARIES = libfribidi.la
 
-AM_CPPFLAGS = $(MISC_CFLAGS)
+AM_CPPFLAGS =
 
 libfribidi_la_LDFLAGS = -no-undefined -version-info $(LT_VERSION_INFO)
-libfribidi_la_LIBADD = $(MISC_LIBS)
+libfribidi_la_LIBADD =
 libfribidi_la_DEPENDENCIES =
 
 if OS_WIN32
@@ -43,14 +43,15 @@ libfribidi_la_SOURCES =	\
 		fribidi-deprecated.c \
 		fribidi-joining.c \
 		fribidi-joining-types.c \
-		fribidi-mem.c \
 		fribidi-mirroring.c \
+		fribidi-brackets.c \
 		fribidi-run.c \
 		fribidi-shape.c \
 		joining-type.tab.i \
 		joining-types.h \
-		mem.h \
 		mirroring.tab.i \
+		brackets.tab.i \
+		brackets-type.tab.i \
 		run.h
 
 GENERATEDSOURCES = \
@@ -58,7 +59,9 @@ GENERATEDSOURCES = \
 		arabic-shaping.tab.i \
 		bidi-type.tab.i \
 		joining-type.tab.i \
-		mirroring.tab.i
+		mirroring.tab.i \
+		brackets.tab.i \
+		brackets-type.tab.i 
 
 BUILT_SOURCES = \
 		$(GENERATEDSOURCES) \

@@ -2,13 +2,6 @@
 ## Process this file with autoconf to produce a configure script.
 ## Use autoupdate to update this file for newer versions of autoconf.
 ## Use autoscan to check if you need to add something to this file.
-##############################################################################
-## $Id: configure.ac,v 1.29 2011-01-21 22:49:59 behdad Exp $
-## $Auther: behdad $
-## $Date: 2011-01-21 22:49:59 $
-## $Revision: 1.29 $
-## $Source: /home/behdad/src/fdo/fribidi/togit/git/../fribidi/fribidi2/configure.ac,v $
-##############################################################################
 
 AC_PREREQ([2.64])
 
@@ -26,12 +19,12 @@ dnl
 dnl If binary backwards compatibility has been broken:
 dnl   FRIBIDI_BINARY_AGE = FRIBIDI_INTERFACE_AGE = 0;
 dnl
-m4_define(fribidi_major_version, 0)dnl
-m4_define(fribidi_minor_version, 19)dnl
-m4_define(fribidi_micro_version, 7)dnl
-m4_define(fribidi_interface_version, 3)dnl
-m4_define(fribidi_interface_age, 6)dnl
-m4_define(fribidi_binary_age, 3)dnl
+m4_define(fribidi_major_version, 1)dnl
+m4_define(fribidi_minor_version, 0)dnl
+m4_define(fribidi_micro_version, 0)dnl
+m4_define(fribidi_interface_version, 4)dnl
+m4_define(fribidi_interface_age, 0)dnl
+m4_define(fribidi_binary_age, 4)dnl
 dnl
 m4_define(fribidi_version,
 	  m4_if(m4_eval(fribidi_micro_version()),0,
@@ -40,13 +33,13 @@ m4_define(fribidi_version,
 
 AC_INIT([GNU FriBidi],
 	fribidi_version(),
-        [http://bugs.freedesktop.org/enter_bug.cgi?product=fribidi],
+        [https://github.com/fribidi/fribidi/issues/new],
 	[fribidi],
 	[http://fribidi.org/])
 
 AC_CONFIG_SRCDIR([fribidi.pc.in])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.11.1 gnits dist-bzip2 no-dist-gzip -Wall no-define])
 AM_SILENT_RULES([yes])
@@ -107,7 +100,7 @@ AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([stdlib.h string.h strings.h inttypes.h wchar.h asm/page.h sys/times.h])
+AC_CHECK_HEADERS([stdlib.h string.h strings.h wchar.h asm/page.h sys/times.h])
 
 # Checks for typedefs and structures.
 AC_C_CONST
@@ -118,6 +111,7 @@ AC_SUBST(SIZEOF_INT)
 AC_CHECK_SIZEOF(short)
 AC_CHECK_SIZEOF(void *)
 AC_CHECK_SIZEOF(wchar_t)
+AX_PROG_CC_FOR_BUILD
 
 # Checks for compiler characteristics.
 changequote(,)dnl
@@ -155,9 +149,6 @@ else
 fi
 AC_SUBST(FRIBIDI_NO_DEPRECATED)
 
-AC_DEFINE(USE_SIMPLE_MALLOC,1,
-	  [Define to 1 if you want to use simple mallocs instead of memory chunks])
-
 # --disable-charsets
 AC_ARG_ENABLE(charsets,
               AC_HELP_STRING([--disable-charsets],
@@ -176,8 +167,6 @@ AC_ARG_WITH(glib,
                              [use Glib @<:@default=auto@:>@]))
 GLIB_PACKAGE=glib-2.0
 GLIB_MINVERSION=2.4
-GLIB_LIBS=
-GLIB_CFLAGS=
 if test x$with_glib = xyes; then
 	PKG_CHECK_MODULES(GLIB,$GLIB_PACKAGE >= $GLIB_MINVERSION)
 	FRIBIDI_USE_GLIB=1
@@ -190,19 +179,7 @@ else
 		FRIBIDI_USE_GLIB=0)
 fi
 fi
-if test x$FRIBIDI_USE_GLIB = x0; then
-	GLIB_PACKAGE=
-fi
-AC_SUBST(FRIBIDI_USE_GLIB)
 AM_CONDITIONAL(FRIBIDI_USE_GLIB, test x$FRIBIDI_USE_GLIB = x1)
-
-
-MISC_CFLAGS="$GLIB_CFLAGS"
-MISC_LIBS="$GLIB_LIBS"
-MISC_PACKAGES="$GLIB_PACKAGE"
-AC_SUBST(MISC_CFLAGS)
-AC_SUBST(MISC_LIBS)
-AC_SUBST(MISC_PACKAGES)
 
 # Generate output
 AC_CONFIG_FILES([fribidi.pc
@@ -213,5 +190,6 @@ AC_CONFIG_FILES([fribidi.pc
 		 lib/Makefile
 		 bin/Makefile
 		 doc/Makefile
-		 test/Makefile])
+		 test/Makefile
+		 fribidi-vs-unicode/Makefile])
 AC_OUTPUT

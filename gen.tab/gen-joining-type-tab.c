@@ -1,12 +1,6 @@
 /* FriBidi
  * gen-joining-type-tab.c - generate joining-type.tab.i
  *
- * $Id: gen-joining-type-tab.c,v 1.7 2010-12-07 19:44:26 behdad Exp $
- * $Author: behdad $
- * $Date: 2010-12-07 19:44:26 $
- * $Revision: 1.7 $
- * $Source: /home/behdad/src/fdo/fribidi/togit/git/../fribidi/fribidi2/gen.tab/gen-joining-type-tab.c,v $
- *
  * Author:
  *   Behdad Esfahbod, 2004
  *
@@ -28,7 +22,7 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA
  * 
- * For licensing issues, contact <license@farsiweb.info>.
+ * For licensing issues, contact <fribidi.license@gmail.com>.
  */
 
 #include <common.h>
@@ -151,6 +145,10 @@ static const char *ignored_bidi_types[] = {
   "LRO",
   "RLO",
   "PDF",
+  "LRI",
+  "RLI",
+  "FSI",
+  "PDI",
   NULL
 };
 
@@ -315,9 +313,9 @@ gen_joining_type_tab (
 	  FRIBIDI_UNICODE_VERSION ". */\n\n", data_file_type[0],
 	  data_file_type[1]);
 
-  printf ("#define PACKTAB_UINT8 fribidi_uint8\n"
-	  "#define PACKTAB_UINT16 fribidi_uint16\n"
-	  "#define PACKTAB_UINT32 fribidi_uint32\n\n");
+  printf ("#define PACKTAB_UINT8 uint8_t\n"
+	  "#define PACKTAB_UINT16 uint16_t\n"
+	  "#define PACKTAB_UINT32 uint32_t\n\n");
 
   if (!pack_table
       (table, FRIBIDI_UNICODE_CHARS, 1, U, max_depth, 1, names,
