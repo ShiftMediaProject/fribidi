@@ -21,7 +21,7 @@ dnl   FRIBIDI_BINARY_AGE = FRIBIDI_INTERFACE_AGE = 0;
 dnl
 m4_define(fribidi_major_version, 1)dnl
 m4_define(fribidi_minor_version, 0)dnl
-m4_define(fribidi_micro_version, 2)dnl
+m4_define(fribidi_micro_version, 3)dnl
 m4_define(fribidi_interface_version, 4)dnl
 m4_define(fribidi_interface_age, 0)dnl
 m4_define(fribidi_binary_age, 4)dnl
@@ -146,19 +146,6 @@ if test x$enable_deprecated = xno; then
 	AC_DEFINE(FRIBIDI_NO_DEPRECATED, 1,
 		  [Don not build deprecated functionality])
 fi
-
-# --disable-docs
-AC_ARG_ENABLE(docs,
-	      AC_HELP_STRING([--disable-docs],
-			     [disable building documentation]),
-			     [], [enable_docs=yes])
-if test x$enable_docs = xyes; then
-	AC_CHECK_PROGS([C2MAN], [c2man])
-	if test -z "$C2MAN"; then
-		AC_MSG_ERROR([c2man is required to build documentation])
-	fi
-fi
-AM_CONDITIONAL([FRIBIDI_ENABLE_DOC], [test -n "$C2MAN"])
 
 # Generate output
 AC_CONFIG_FILES([fribidi.pc
