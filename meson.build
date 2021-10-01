@@ -1,4 +1,4 @@
-project('fribidi', 'c', version: '1.0.10',
+project('fribidi', 'c', version: '1.0.11',
   meson_version : '>= 0.48')
 
 # New release:
@@ -100,9 +100,10 @@ endif
 
 # fribidi.pc
 pkg = import('pkgconfig')
-pkg.generate(name: 'GNU FriBidi',
+pkg.generate(libfribidi,
+  name: 'GNU FriBidi',
   filebase: 'fribidi',
   description: 'Unicode Bidirectional Algorithm Library',
-  libraries: libfribidi, 
+  extra_cflags: fribidi_static_cargs,
   subdirs: 'fribidi',
   version: meson.project_version())
