@@ -7,8 +7,8 @@
 #define FRIBIDI_NAME "GNU FriBidi"
 #define FRIBIDI_BUGREPORT "http://bugs.freedesktop.org/enter_bug.cgi?product=fribidi"
 
-#define FRIBIDI_VERSION "v1.0.12"
-#define FRIBIDI_MAJOR_VERSION v1
+#define FRIBIDI_VERSION "1.0.12"
+#define FRIBIDI_MAJOR_VERSION 1
 #define FRIBIDI_MINOR_VERSION 0
 #define FRIBIDI_MICRO_VERSION 12
 #define FRIBIDI_INTERFACE_VERSION 4
