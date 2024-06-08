@@ -1,4 +1,4 @@
-project('fribidi', 'c', version: '1.0.13',
+project('fribidi', 'c', version: '1.0.14',
   meson_version : '>= 0.54')
 
 # New release:
@@ -76,7 +76,7 @@ incs = include_directories('.', 'lib', 'gen.tab')
 
 subdir('gen.tab')
 subdir('lib')
-if get_option('bin')
+if get_option('bin') or get_option('tests')
   subdir('bin')
 endif
 if get_option('tests')
